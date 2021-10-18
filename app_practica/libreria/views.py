@@ -15,7 +15,7 @@ class VerLibros(ListView):
 
     def get_queryset(self):
         self.titulo = self.request.GET.get("titulo", default="")
-        return Libro.objects.filter(titulo__contains=self.titulo)
+        return Libro.objects.filter(titulo__icontains=self.titulo)
 
 
 class DetalleLibro(DetailView):

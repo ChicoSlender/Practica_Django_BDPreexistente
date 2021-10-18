@@ -62,4 +62,4 @@ INSERT INTO CategoriasXLibros (id_libro, id_categoria) VALUES
 
 CREATE USER IF NOT EXISTS 'test'@'localhost' IDENTIFIED BY 'test123';
 
-GRANT DELETE, INSERT, SELECT, UPDATE ON PruebaLibreria.* TO 'test'@'localhost';
+GRANT DELETE, INSERT, SELECT, UPDATE, CREATE ON PruebaLibreria.* TO 'test'@'localhost';

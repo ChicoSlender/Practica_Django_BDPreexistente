@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    <title>TEST - {{object.titulo}}</title>
+{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-sm col-3">
+        <img src="{% static 'uploads/' %}{{ object.img }}" alt="{{ object.titulo }}" width="100%">
+    </div>
+    <div class="col-sm col-9">
+        <h2 class="title">
+            {{ object.titulo }}
+        </h2>
+        <h4 class="text-muted">
+            {{ object.id_autor }}
+        </h4>
+        <p>
+            {{ object.descripcion }}
+        </p>
+        <p>
+            <span class="font-weight-bold">Categorías:</span>
+            {% for categoria in object.categorias.all %}
+                <span class="badge badge-info">{{ categoria }}</span>
+            {% endfor %}
+        </p>
+    </div>
+</div>
+
+{% endblock %}

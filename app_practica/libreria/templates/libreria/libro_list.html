@@ -7,6 +7,17 @@
 {% load static %}
 
 {% block content %}
+            <form class="form-inline">
+                <div class="form-group w-75">
+                    <input type="text" name="titulo" id="titulo" class="form-control w-100" placeholder="Ingrese un titulo para buscar...">
+                </div>
+                <div class="form-group ml-2">
+                    <input type="submit" value="Buscar" class="btn btn-primary">
+                </div>
+            </form>
+
+            <br>
+
             <div class="row">
     {% for libro in object_list %}
                 <div class="col col-md-6">
